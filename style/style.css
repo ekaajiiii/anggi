@@ -163,8 +163,9 @@ nav a{
 }
 
 .feature-img {
-  width: 350px;
-  height: 350px;
+  width: 100%;
+    max-width: 350px;
+  height: auto;
   object-fit: contain;
   margin-bottom: 1rem;
 }
@@ -239,39 +240,48 @@ nav a{
 
 
 /* CV */
-.cv{
-    width:90%;
-    margin:auto;
+.cv-section{
+    padding:40px 20px;
+    text-align:center;
+}
+
+.cv-container{
     display:flex;
-    gap:30px;
-    padding:100px 0;
-}
-
-.cv-info{
-    width:30%;
-}
-
-.cv-info h2{
-    font-size:45px;
-    margin-bottom:20px;
-}
-
-.cv-info button{
-    margin-top:30px;
-    background:white;
-    border:1px solid gray;
-    padding:15px 35px;
+    justify-content:center;
+    align-items:center;
 }
 
 .cv-card{
-    flex:1;
+    display:block;
+    width:350px;
+
+    text-decoration:none;
+
+    background:#c8d9e6;
+    border:1px solid #2F4156;
+    border-radius:10px;
+
+    padding:15px;
+
+    transition:.3s;
 }
 
-.cv-card .img{
-    height:320px;
-    background:#bbb;
+.cv-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
 }
 
+.cv-card img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.cv-title{
+    margin-top:15px;
+    color:#2F4156;
+    font-weight:bold;
+}
 /* Kontak */
 .contact{
     padding:80px 0;
@@ -369,4 +379,115 @@ nav a{
 .zxq-footer-content span{
     font-size:14px;
     color:#d9d9d9;
+}
+
+/* TABLET */
+@media screen and (max-width: 992px){
+
+    .beranda{
+        flex-direction:column-reverse;
+        text-align:center;
+        gap:40px;
+    }
+
+    .beranda-text{
+        width:100%;
+    }
+
+    .beranda-image{
+        width:300px;
+        height:300px;
+    }
+
+    .beranda h1{
+        font-size:48px;
+    }
+
+    nav{
+        gap:15px;
+    }
+
+    nav a{
+        font-size:16px;
+    }
+
+    .feature-img{
+        width:250px;
+        height:250px;
+    }
+}
+
+/* MOBILE */
+@media screen and (max-width: 768px){
+
+    header{
+        padding:15px 20px;
+    }
+
+    nav{
+        gap:10px;
+    }
+
+    nav a{
+        font-size:14px;
+    }
+
+    .beranda{
+        padding-top:120px;
+    }
+
+    .beranda h1{
+        font-size:38px;
+        line-height:1.2;
+    }
+
+    .beranda p{
+        font-size:16px;
+    }
+
+    .beranda-image{
+        width:250px;
+        height:250px;
+    }
+
+    .tentang{
+        flex-direction:column;
+        padding:60px 20px;
+    }
+
+    .tentang-content h2{
+        font-size:32px;
+        text-align:center;
+    }
+
+    .feature{
+        flex:1 1 100%;
+    }
+
+    .feature-img{
+        width:100%;
+        height:auto;
+    }
+
+    .contact-container{
+        flex-direction:column;
+    }
+
+    .contact-card{
+        width:100%;
+        max-width:320px;
+    }
+}
+
+@media screen and (max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
 }
