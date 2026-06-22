@@ -107,6 +107,35 @@ nav a{
     display: block;
 }
 
+.btn-instagram{
+    display:inline-block;
+    padding:15px 35px;
+
+    background:#2F4156;
+    color:#fff;
+
+    text-decoration:none;
+    font-weight:600;
+    letter-spacing:1px;
+
+    border-radius:8px;
+
+    transition:all 0.3s ease;
+}
+
+/* Hover Effect */
+.btn-instagram:hover{
+    background:#567C8D;
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 20px rgba(47,65,86,0.3);
+}
+
+/* Efek saat diklik */
+.btn-instagram:active{
+    transform:translateY(-1px);
+}
+
 /* PORTO */
 .portofolio{
   text-align: center;
